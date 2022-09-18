@@ -1,0 +1,6 @@
+<h2>Products</h2>
+<app-product-filter (filter)="sortByBrand($event)"></app-product-filter>
+
+<div *ngFor="let product of tempProducts">
+  <app-product-item (remove)="onProductRemove($event)" [product]="product"></app-product-item>
+</div>
